@@ -85,14 +85,14 @@ ul {
     height: 64px;
 }
 
-.logo a {
+.profileImg a {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-dark);
     transition: var(--transition);
 }
 
-.logo a:hover {
+.profileImg a:hover {
     color: var(--primary-color);
 }
 
