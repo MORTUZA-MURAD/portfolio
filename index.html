@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mushfikur Rahman - Frontend Web Developer Portfolio">
+    <meta name="keywords" content="Web Developer, Frontend Developer, HTML, CSS, JavaScript, React">
+    <meta name="author" content="Mushfikur Rahman">
+    <title>Mushfikur Rahman - Frontend Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nab-bar-div">
+                <div class="logo">
+                    <a href="#home">Mushfikur Rahman</a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hello, I'm <span class="highlight">Mushfikur Rahman</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Frontend Web Developer</h2>
+                    <p class="hero-description">
+                        Passionate frontend developer creating beautiful, responsive websites and web applications.
+                        Currently studying Computer Science & Engineering at Daffodil International University.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="https://github.com/mushfikur-dwip/mushfikur/blob/main/cv.pdf" target="_blank"
+                            class="btn btn-primary">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download Resume
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/mushfikur-dwip" target="_blank" class="social-btn"
+                                title="GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/mushfikur__dwip" target="_blank" class="social-btn"
+                                title="Twitter">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/mushfikur.a.k" target="_blank" class="social-btn"
+                                title="Facebook">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-pic-wrapper">
+                        <img src="https://github.com/mushfikur-dwip/mushfikur/blob/main/img.png?raw=true"
+                            alt="Mushfikur Rahman" class="profile-pic">
+                        <div class="availability-badge">Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Get to know more about my journey, passions, and what drives me as a developer.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>My Programming Journey</h3>
+                        <p>
+                            My journey into web development started during my college years when I discovered
+                            the power of HTML, CSS, and JavaScript. What began as curiosity about how websites
+                            work quickly evolved into a passion for creating beautiful, functional web applications.
+                            I've dedicated countless hours to mastering frontend technologies and building projects
+                            that solve real-world problems.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>What I Enjoy</h3>
+                        <p>
+                            I thrive on transforming creative designs into pixel-perfect, responsive websites.
+                            My passion lies in frontend development, where I can combine technical skills with
+                            creativity to craft intuitive user experiences. I particularly enjoy working with
+                            React and modern CSS frameworks to build interactive and engaging web applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>Academic Pursuits</h3>
+                        <p>
+                            Currently pursuing my Bachelor's degree in Computer Science & Engineering at Daffodil
+                            International University, I balance my academic studies with practical web development
+                            projects. This combination of theoretical knowledge and hands-on experience helps me
+                            stay current with industry trends and best practices.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>My Approach</h3>
+                        <p>
+                            I believe in writing clean, maintainable code and following modern development practices.
+                            I'm constantly learning new technologies and techniques to improve my skills and deliver
+                            better results for my clients. Communication, attention to detail, and meeting deadlines
+                            are the cornerstones of my work ethic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-description">
+                    Here are the technologies and tools I work with to bring ideas to life.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <h3 class="skill-category-title">Frontend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Tailwind CSS</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <h3 class="skill-category-title">Backend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Express.js</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percentage">72%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="72"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase</span>
+                                    <span class="skill-percentage">78%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="78"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">REST API</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <h3 class="skill-category-title">Tools & Others</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & GitHub</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Photoshop</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-description">
+                    My academic background and formal education in computer science.
+                </p>
+            </div>
+
+            <div class="education-content">
+                <div class="education-card">
+                    <h3 class="education-degree">Higher Secondary Certificate (HSC)</h3>
+                    <h4 class="education-institution">Gouripur Government College</h4>
+                    <p class="education-year"><strong>Year:</strong> 2020-2022</p>
+                    <p class="education-description">
+                        Completed HSC in Science group with focus on Mathematics, Physics, and Chemistry.
+                        Active in programming club and technology events.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <h3 class="education-degree">Bachelor of Science in Software & Engineering</h3>
+                    <h4 class="education-institution">Daffodil International University</h4>
+                    <p class="education-year"><strong>Year:</strong> 2022-Present</p>
+                    <p class="education-description">
+                        Currently pursuing SWE degree with specialization in web development and software engineering.
+                        Maintaining excellent academic performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-description">
+                    My professional journey and the roles that have shaped my career.
+                </p>
+            </div>
+
+            <div class="experience-content">
+                <div class="experience-card">
+                    <h3 class="experience-position">Full Time Wordpress Developer</h3>
+                    <h4 class="experience-company">Learning Bangladesh</h4>
+                    <p class="experience-duration"><strong>Duration:</strong> 2022-2025</p>
+                    <ul class="experience-description">
+                        <li>Built an e-learning platform with an eBook system, student community integration, and smooth
+                            payment flow.</li>
+                        <li>Generated over 1 crore revenue per year from the platform.</li>
+                        <li>Worked closely with product, marketing, and design teams for optimized user journeys.</li>
+                        <li><strong>Technologies:</strong> WordPress, React.js, Next.js, TailwindCSS, Redux, Firebase,
+                            SSLCommerz</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3 class="experience-position">Frontend Developer (Remote)</h3>
+                    <h4 class="experience-company">MiakeBD</h4>
+                    <p class="experience-duration"><strong>Duration:</strong> 2023-Present</p>
+                    <ul class="experience-description">
+                        <li>Developed a high-converting eCommerce site for a Japanese cosmetic brand with 1M+ monthly
+                            sales.</li>
+                        <li>Integrated doctor appointment system, dynamic product search (based on skin problems), and
+                            delivery ETA.</li>
+                        <li><strong>Technologies:</strong> Wordpress, Firebase, and SSLCommerz, OpenAi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Here are some of my best work that showcase my skills and creativity.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">E</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ES NGO Website</h3>
+                        <p class="project-description">
+                            A comprehensive NGO website with modern design and responsive layout
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <a href="https://esngo.vercel.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">S</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Scene Maker Tool</h3>
+                        <p class="project-description">
+                            Interactive scene creation tool with drag-and-drop functionality
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Canvas API</span>
+                        </div>
+                        <a href="https://scenemaker.netlify.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">N</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NAK School Website</h3>
+                        <p class="project-description">
+                            Educational institution website with student and teacher portals
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                        </div>
+                        <a href="https://nak-school.netlify.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">R</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Restaurant Landing Page</h3>
+                        <p class="project-description">
+                            Modern restaurant website with online ordering system
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                            <span class="tech-badge">Node.js</span>
+                        </div>
+                        <a href="https://vocal-beignet-407f73.netlify.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">P</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Template</h3>
+                        <p class="project-description">
+                            Clean and professional portfolio template for developers
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">GSAP</span>
+                        </div>
+                        <a href="https://famous-alpaca-fe4e79.netlify.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">B</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">bKash Landing Page</h3>
+                        <p class="project-description">
+                            Mobile financial service landing page with modern UI/UX
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <a href="https://bkashlandingpage.netlify.app" target="_blank" class="project-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Let's connect! Feel free to reach out for collaborations, opportunities, or just to say hello.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <h3>Email</h3>
+                    <p>@musfikurrahmandip</p>
+                    <a href="mailto:@musfikurrahmandip" class="contact-btn">Send Email</a>
+                </div>
+
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <h3>Phone</h3>
+                    <p>+880 1903 812 566</p>
+                    <a href="tel:+8801903812566" class="contact-btn">Call Now</a>
+                </div>
+
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                    <h3>WhatsApp</h3>
+                    <p>+880 1303 252 317</p>
+                    <a href="https://wa.me/8801303252317" target="_blank" class="contact-btn">Message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Mushfikur Rahman</h3>
+                <p class="footer-description">Building the future, one line of code at a time.</p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/mushfikur-dwip" target="_blank" class="footer-social-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/mushfikur__dwip" target="_blank" class="footer-social-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/mushfikur.a.k" target="_blank" class="footer-social-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mushfikur Rahman. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
