@@ -10,7 +10,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Close mobile menu when clicking on a nav link
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav001link1');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -28,7 +28,7 @@ navLinks.forEach(link => {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 64; // 64px for navbar height
+            const offsetTop = targetSection.offsetTop - 64; // 64px for navOrbitWrap height
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -38,18 +38,18 @@ navLinks.forEach(link => {
 });
 
 // ===========================
-// Navbar Scroll Effect
+// navOrbitWrap Scroll Effect
 // ===========================
-const navbar = document.getElementById('navbar');
+const navOrbitWrap = document.getElementById('navOrbitWrap');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        navOrbitWrap.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        navOrbitWrap.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
     }
     
     lastScroll = currentScroll;
@@ -84,7 +84,7 @@ window.addEventListener('scroll', () => {
 // ===========================
 const animateSkills = () => {
     const skillsSection = document.getElementById('skills');
-    const progressBars = document.querySelectorAll('.progress-fill');
+    const progressBars = document.querySelectorAll('.skillFillBar');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -113,7 +113,7 @@ animateSkills();
 // Scroll Reveal Animation
 // ===========================
 const revealElements = () => {
-    const reveals = document.querySelectorAll('.about-card, .skill-card, .education-card, .experience-card, .project-card, .contact-card');
+    const reveals = document.querySelectorAll('.aboutTwinColumn, .skillPanelPrimecard, .educationcard11, .experience-card, .project-card, .contact-card');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -178,13 +178,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===========================
 // Mouse Parallax Effect (Hero Section)
 // ===========================
-const heroSection = document.querySelector('.hero-section');
+const heroSection = document.querySelector('.heroNovaShell');
 if (heroSection) {
     heroSection.addEventListener('mousemove', (e) => {
         const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
         const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
         
-        const profilePic = document.querySelector('.profile-pic-wrapper');
+        const profilePic = document.querySelector('.profilePhotoRing');
         if (profilePic) {
             profilePic.style.transform = `translate(${moveX}px, ${moveY}px)`;
         }
