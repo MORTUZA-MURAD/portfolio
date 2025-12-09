@@ -4,378 +4,1428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
     <title>Mortuza Murad - Frontend Web Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+    
+      * {
+            margin: 0;
+          padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+          --primary-dark: #1e40af;
+         --secondary-color: #64748b;
+          --text-dark: #1f2937;
+            --text-light: #6b7280;
+       --bg-white: #ffffff;
+            --bg-gray: #f9fafb;
+          --bg-gray-dark: #f3f4f6;
+        --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+       --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+     html {
+            scroll-behavior: smooth;
+                  }
+
+        body {
+       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+         color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+       img {
+            max-width: 100%;
+       height: auto;
+            display: block;
+        }
+
+    a {
+            text-decoration: none;
+            color: inherit;
+       }
+
+     ul {
+            list-style: none;
+        }
+
+     .heroMetaGrid {
+         max-width: 1280px;
+          margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+     .icon {
+            width: 20px;
+         height: 20px;
+        }
+
+       
+   .navOrbitWrap {
+         position: fixed;
+            top: 0;
+          left: 0;
+            right: 0;
+      z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+           backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+        }
+
+    .navPulseMenu {
+            display: flex;
+           justify-content: space-between;
+            align-items: center;
+        height: 64px;
+        }
+     .profileImg a {
+                font-size: 1.5rem;
+           font-weight: 700;
+          color: var(--text-dark);
+          transition: var(--transition);
+        }
+
+         .profileImg a:hover {
+            color: var(--primary-color);
+        }
+
+     .navCoreShell {
+                display: flex;
+            gap: 2rem;
+        }
+
+            .nav001link1 {
+        color: var(--text-light);
+          font-weight: 500;
+            font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+              border-radius: 0.375rem;
+            transition: var(--transition);
+        }
+
+       .nav001link1:hover {
+            color: var(--text-dark);
+            background-color: var(--bg-gray);
+        }
+
+        .brandNodeText {
+            display: none;
+              flex-direction: column;
+             gap: 4px;
+           cursor: pointer;
+            padding: 0.5rem;
+          }
+
+      .brandNodeText span {
+           display: block;
+            width: 25px;
+          height: 3px;
+          background-color: var(--text-dark);
+              transition: var(--transition);
+        }
+
+    .brandNodeText.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .brandNodeText.active span:nth-child(2) {
+            opacity: 0;
+          }
+
+         .brandNodeText.active span:nth-child(3) {
+               transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      
+      .btn {
+               display: inline-flex;
+          align-items: center;
+             gap: 0.5rem;
+           padding: 0.75rem 1.5rem;
+              font-weight: 500;
+          border-radius: 0.5rem;
+        transition: var(--transition);
+            border: none;
+        cursor: pointer;
+           font-size: 1rem;
+           }
+
+      .btn-primary {
+           background-color: var(--primary-color);
+            color: white;
+          }
+
+    .btn-primary:hover {
+            background-color: var(--primary-dark);
+              transform: translateY(-2px);
+          box-shadow: var(--shadow-lg);
+          }
+
+           .social-btn,
+      .contactbtn1,
+        .projectlink5 {
+           display: inline-flex;
+               align-items: center;
+         justify-content: center;
+                gap: 0.5rem;
+          padding: 0.5rem 1rem;
+            border: 2px solid var(--border-color);
+             border-radius: 0.5rem;
+           transition: var(--transition);
+             background-color: white;
+           color: var(--text-dark);
+            font-weight: 500;
+           }
+
+      .social-btn {
+            padding: 0.625rem;
+          }
+
+           .social-btn:hover,
+      .contactbtn1:hover,
+         .projectlink5:hover {
+          border-color: var(--primary-color);
+        color: var(--primary-color);
+            transform: translateY(-2px);
+             box-shadow: var(--shadow-md);
+        }
+
+        .heroNovaShell {
+        padding-top: 64px;
+              min-height: 100vh;
+            display: flex;
+          align-items: center;
+             background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+          }
+
+       .heroPrimeTitle {
+            display: grid;
+          grid-template-columns: 1fr 1fr;
+              gap: 3rem;
+            align-items: center;
+             padding: 5rem 0;
+          }
+
+    .heroBioFlow {
+              font-size: 3.75rem;
+          font-weight: 700;
+            color: var(--text-dark);
+           margin-bottom: 1.5rem;
+                 line-height: 1.2;
+         }
+
+        .heroTextCluster {
+            color: var(--primary-color);
+      }
+
+        .profileAuraBox {
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+           }
+
+        .herodescription1 {
+        font-size: 1.125rem;
+            color: var(--text-light);
+              margin-bottom: 2rem;
+            max-width: 32rem;
+        }
+
+      .heroBtnCluster {
+            display: flex;
+            flex-direction: column;
+          gap: 1rem;
+        }
+
+        .socialNodeBtn000 {
+               display: flex;
+            gap: 1rem;
+       }
+
+        .profilePhotoRing {
+                position: relative;
+            width: 320px;
+             height: 320px;
+            margin: 0 auto;
+      }
+
+          .profile-pic {
+            width: 100%;
+          height: 100%;
+            border-radius: 50%;
+             object-fit: cover;
+         border: 8px solid white;
+            box-shadow: var(--shadow-xl);
+          }
+
+            .statusNanoBadge {
+        position: absolute;
+            bottom: -1rem;
+              right: -1rem;
+            width: 96px;
+          height: 96px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+             justify-content: center;
+              color: white;
+            font-weight: 700;
+             font-size: 1.125rem;
+            box-shadow: var(--shadow-lg);
+      }
+
+           section {
+            padding: 5rem 0;
+       }
+
+           .aboutMainGrid {
+            text-align: center;
+             margin-bottom: 4rem;
+       }
+
+         .aboutStoryCard {
+            font-size: 2.5rem;
+        font-weight: 700;
+            color: var(--text-dark);
+             margin-bottom: 1rem;
+       }
+
+         .aboutSkillBlade {
+              font-size: 1.125rem;
+            color: var(--text-light);
+             max-width: 48rem;
+            margin: 0 auto;
+        }
+
+       
+          .aboutRealmWrap {
+            background-color: var(--bg-white);
+       }
+
+         .aboutToneBlock {
+           display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+            align-items: start;
+        }
+      .aboutCoreInfo {
+            display: flex;
+              flex-direction: column;
+            gap: 1.5rem;
+         }
+
+            .aboutTwinColumn h3 {
+          font-size: 1.5rem;
+             font-weight: 600;
+            color: var(--text-dark);
+          margin-bottom: 1rem;
+          }
+
+         .aboutTwinColumn p {
+              color: var(--text-light);
+            line-height: 1.75;
+         }
+
+          .skillsOmegaGrid {
+            background-color: var(--bg-gray);
+      }
+
+          .skillsOmegaGrid1 {
+            display: grid;
+          grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+         }
+
+          .skillPanelPrimecard {
+            background-color: white;
+           padding: 2rem;
+             border-radius: 0.75rem;
+           box-shadow: var(--shadow-md);
+             transition: var(--transition);
+        }
+
+          .skillPanelPrimecard:hover {
+         box-shadow: var(--shadow-lg);
+             transform: translateY(-4px);
+       }
+
+           .skillPanelPrimetitle {
+            font-size: 1.25rem;
+         font-weight: 600;
+          color: var(--text-dark);
+                     margin-bottom: 1.5rem;
+            text-transform: capitalize;
+         }
+
+          .skilllist1 {
+            display: flex;
+         flex-direction: column;
+            gap: 1.5rem;
+      }
+
+          .skillinfo11 {
+          display: flex;
+            justify-content: space-between;
+          align-items: center;
+            margin-bottom: 0.5rem;
+         }
+
+         .skillname {
+            font-size: 0.875rem;
+         font-weight: 500;
+            color: var(--text-dark);
+         }
+
+       .skillpercentageinfo {
+            font-size: 0.875rem;
+             color: var(--text-light);
+         }
+
+          .skillScaleTrack {
+        width: 100%;
+           height: 8px;
+             background-color: var(--bg-gray);
+           border-radius: 9999px;
+             overflow: hidden;
+         }
+
+          .skillFillBar {
+          height: 100%;
+             background-color: var(--primary-color);
+             border-radius: 9999px;
+            width: 0;
+          transition: width 1s ease-in-out;
+        }
+
+          .skillFillBar.animate {
+            width: var(--progress-width);
+        }
+
+        
+         .eduCardBlock {
+            background-color: var(--bg-white);
+        }
+
+        .eduGalaxyWrap {
+              max-width: 64rem;
+            margin: 0 auto;
+             display: flex;
+            flex-direction: column;
+             gap: 2rem;
+       }
+
+         .educationcard11 {
+            background-color: white;
+        padding: 2rem;
+            border-radius: 0.75rem;
+             box-shadow: var(--shadow-md);
+            transition: var(--transition);
+       }
+
+    .educationcard11:hover {
+              box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+         }
+
+        .eduDegreeTag {
+         font-size: 1.5rem;
+             font-weight: 600;
+             color: var(--text-dark);
+               margin-bottom: 0.5rem;
+         }
+
+         .eduInstitutionName {
+            font-size: 1.125rem;
+         color: var(--primary-color);
+             font-weight: 500;
+             margin-bottom: 0.5rem;
+         }
+
+            .eduTimelineRow {
+            color: var(--text-light);
+             margin-bottom: 0.5rem;
+      }
+
+         .eduInfoText {
+             color: var(--text-light);
+              line-height: 1.75;
+        }
+
+        
+          .projectsection1 {
+            background-color: var(--bg-white);
+         }
+
+       .projectgrid1 {
+             display: grid;
+            grid-template-columns: repeat(3, 1fr);
+              gap: 2rem;
+         }
+
+           .projectcard1 {
+          background-color: white;
+        border-radius: 0.75rem;
+             overflow: hidden;
+             box-shadow: var(--shadow-md);
+               transition: var(--transition);
+         }
+
+         .projectcard1:hover {
+              box-shadow: var(--shadow-lg);
+             transform: translateY(-4px);
+         }
+
+         .projectimage1 {
+               aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 100%);
+             display: flex;
+            align-items: center;
+            justify-content: center;
+               overflow: hidden;
+      }
+        
+        .projectimage1 img {
+            width: 100%;
+          height: 100%;
+              object-fit: cover;
+         }
+
+          .projectplaceholder1 {
+            font-size: 3rem;
+        font-weight: 700;
+            color: var(--primary-color);
+         }
+
+         .projectcontent5 {
+            padding: 1.5rem;
+          }
+
+          .projecttitle5 {
+            font-size: 1.25rem;
+             font-weight: 600;
+             color: var(--text-dark);
+               margin-bottom: 0.5rem;
+      }
+
+           .projectdescription5 {
+         font-size: 0.875rem;
+              color: var(--text-light);
+          margin-bottom: 1rem;
+         }
+
+          .projecttech5 {
+           display: flex;
+                flex-wrap: wrap;
+             gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .techbadge5 {
+            padding: 0.25rem 0.75rem;
+                background-color: var(--bg-gray);
+             color: var(--text-dark);
+            font-size: 0.75rem;
+              font-weight: 500;
+            border-radius: 9999px;
+       }
+        
+         .projectlink5 {
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+        
+        .contactWaveWrap {
+            background-color: var(--bg-gray);
+        }
+
+       .contactBoxPrime {
+             display: grid;
+               grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+             max-width: 64rem;
+              margin: 0 auto;
+     }
+
+          .contact-card {
+               background-color: white;
+              padding: 2rem;
+             border-radius: 0.75rem;
+            text-align: center;
+             box-shadow: var(--shadow-md);
+             transition: var(--transition);
+      }
+
+         .contact-card:hover {
+             box-shadow: var(--shadow-lg);
+         transform: translateY(-4px);
+        }
+
+          .contact-icon {
+              width: 48px;
+            height: 48px;
+             color: var(--primary-color);
+            margin: 0 auto 1rem;
+      }
+
+         .contact-card h3 {
+              font-size: 1.25rem;
+            font-weight: 600;
+                color: var(--text-dark);
+          margin-bottom: 0.5rem;
+         }
+  
+            .contact-card p {
+             color: var(--text-light);
+               margin-bottom: 1rem;
+       }
+
+        
+            .footer {
+            padding: 3rem 0;
+              background-color: #111827;
+             color: white;
+         }
+
+          .footer-content {
+            text-align: center;
+         }
+
+           .footertitle1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+      }
+
+           .footerdes11 {
+           color: #9ca3af;
+            margin-bottom: 1.5rem;
+    }
+
+         .footersocial {
+            display: flex;
+                justify-content: center;
+            gap: 1.5rem;
+                margin-bottom: 2rem;
+        }
+
+         .footersociallink {
+            color: #9ca3af;
+              transition: var(--transition);
+       }
+
+       .footersociallink:hover {
+              color: white;
+        }
+
+          .footercopyright2 {
+             padding-top: 2rem;
+         border-top: 1px solid #374151;
+        }
+
+           .footercopyright2 p {
+           color: #9ca3af;
+         }
+
+      
+      @media (max-width: 1024px) {
+             .heroPrimeTitle,
+              .aboutToneBlock {
+                  grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+               .heroSubGlow {
+                 text-align: center;
+            }
+
+            .herodescription1 {
+           margin: 0 auto 2rem;
+        }
+
+            .heroBtnCluster {
+                  align-items: center;
+               }
+
+            .skillsOmegaGrid1 {
+                 grid-template-columns: repeat(2, 1fr);
+             }
+
+        .projectgrid1 {
+                grid-template-columns: repeat(2, 1fr);
+         }
+        }
+
+            @media (max-width: 768px) {
+              .brandNodeText {
+                display: flex;
+              }
+
+        .navGlyphToggle {
+                position: absolute;
+              top: 64px;
+                 left: 0;
+             right: 0;
+                   background-color: white;
+           box-shadow: var(--shadow-lg);
+                 padding: 1rem;
+                display: none;
+         }
+
+               .navGlyphToggle.active {
+                 display: block;
+             }
+ 
+            .navCoreShell {
+                 flex-direction: column;
+                 gap: 0;
+              }
+
+            .nav001link1 {
+                   display: block;
+                 padding: 0.75rem 1rem;
+                  border-radius: 0.375rem;
+             }
+
+             .heroBioFlow {
+                font-size: 2.5rem;
+            }
+
+            .profileAuraBox {
+                 font-size: 1.5rem;
+            }
+
+            .aboutStoryCard {
+                 font-size: 2rem;
+            }
+
+               .skillsOmegaGrid1,
+              .projectgrid1,
+            .contactBoxPrime {
+                 grid-template-columns: 1fr;
+            }
+
+             .profilePhotoRing {
+                  width: 280px;
+                height: 280px;
+              }
+
+            .statusNanoBadge {
+                width: 80px;
+                 height: 80px;
+                font-size: 1rem;
+             }
+        }
+
+      @media (max-width: 640px) {
+            .heroMetaGrid {
+                padding: 0 1rem;
+                }
+
+            section {
+                padding: 3rem 0;
+            }
+  
+              .heroPrimeTitle {
+                padding: 3rem 0;
+             }
+
+            .heroBioFlow {
+                    font-size: 2rem;
+            }
+  
+            .profileAuraBox {
+                font-size: 1.25rem;
+               }
+
+               .aboutStoryCard {
+                  font-size: 1.75rem;
+              }
+
+            .profilePhotoRing {
+                width: 240px;
+                   height: 240px;
+            }
+
+               .statusNanoBadge {
+                width: 72px;
+                height: 72px;
+                   font-size: 0.875rem;
+            }
+
+            .socialNodeBtn000 {
+                justify-content: center;
+            }
+        }
+
+     @keyframes fadeInUp {
+            from {
+                  opacity: 0;
+                transform: translateY(30px);
+            }
+              to {
+                opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+       .animate-fade-in {
+             animation: fadeInUp 0.6s ease-out;
+        }
+
+       
+           section {
+             scroll-margin-top: 80px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation Bar Mortuza -->
-    <nav class="navOrbitWrap" id="navOrbitWrap">
+        <nav class="navOrbitWrap" id="navOrbitWrap">
         <div class="heroMetaGrid">
-            <div class="navPulseMenu">
-              <div class="profileImg">
+               <div class="navPulseMenu">
+                <div class="profileImg">
                     <a href="#home">Mortuza Murad</a>
-                </div>
+                   </div>
 
-                <div class="navGlyphToggle" id="navMenu">
-                    <ul class="navCoreShell">
-                        <li><a href="#home" class="nav001link1">Home</a></li>
-                 <li><a href="#about" class="nav001link1">About</a></li>
-                        <li><a href="#skills" class="nav001link1">Skills</a></li>
-                        <li><a href="#education" class="nav001link1">Education</a></li>
-                <li><a href="#experience" class="nav001link1">Experience</a></li>
-                        <li><a href="#projects" class="nav001link1">Projects</a></li>
+                   <div class="navGlyphToggle" id="navMenu">
+                      <ul class="navCoreShell">
+                          <li><a href="#home" class="nav001link1">Home</a></li>
+                  <li><a href="#about" class="nav001link1">About</a></li>
+                    <li><a href="#skills" class="nav001link1">Skills</a></li>
+                          <li><a href="#education" class="nav001link1">Education</a></li>
+                            <li><a href="#projects" class="nav001link1">Projects</a></li>
                         <li><a href="#contact" class="nav001link1">Contact</a></li>
-                    </ul>
-                </div>
+                </ul>
+          </div>
 
-                <div class="brandNodeText" id="menuToggle">
+                    <div class="brandNodeText" id="menuToggle">
                     <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+                        <span></span>
+                      <span></span>
+                  </div>
+         </div>
+           </div>
+         </nav>
 
-    <!-- Hello And Photo Section -->
-    <section id="home" class="heroNovaShell">
-        <div class="heroMetaGrid">
-            <div class="heroPrimeTitle">
-              <div class="heroSubGlow">
-                 <h1 class="heroBioFlow">
-                        Hello, I'm <span class="heroTextCluster">Mortuza Murad</span>
+       <section id="home" class="heroNovaShell">
+             <div class="heroMetaGrid">
+        <div class="heroPrimeTitle">
+                <div class="heroSubGlow">
+                       <h1 class="heroBioFlow">
+                             Hello, I'm <span class="heroTextCluster">Mortuza Murad</span>
                     </h1>
-                    <h2 class="profileAuraBox">Frontend Web Developer</h2>
-                    <p class="herodescription1">
+                       <h2 class="profileAuraBox">Frontend Web Developer</h2>
+                         <p class="herodescription1">
                         Passionate frontend developer creating beautiful, responsive websites and web applications.
-                        Currently studying Software Engineering at Daffodil International University.
-                    </p>
+                    Currently studying Software Engineering at Daffodil International University.
+                           </p>
 
-                    <div class="heroBtnCluster">
-                        <a href="https://github.com/MORTUZA-MURAD/portfolio/blob/main/Screenshot%202025-12-03%20at%2011.12.35.png?raw=true" target="_blank"
-                            class="btn btn-primary">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
+          <div class="heroBtnCluster">
+                            <a href="https://github.com/MORTUZA-MURAD/portfolio/blob/main/Screenshot%202025-12-03%20at%2011.12.35.png?raw=true" target="_blank"
+                                class="btn btn-primary">
+                       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                           <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
                             Download Resume
-                        </a>
-                        <div class="socialNodeBtn000">
-                            <a href="https://github.com/MORTUZA-MURAD" target="_blank" class="social-btn"
-                                title="GitHub">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                          </a>
+                <div class="socialNodeBtn000">
+                                  <a href="https://github.com/MORTUZA-MURAD" target="_blank" class="social-btn"
+                                        title="GitHub">
+                       <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                            </a>
-                            
-                            <a href="https://www.facebook.com/mortu.za.55196" target="_blank" class="social-btn"
-                                title="Facebook">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                </svg>
-                         </a>
-                       </div>
-                    </div>
-            </div>
+                                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                      </svg>
+                              </a>
+                              
+                       <a href="https://www.facebook.com/mortu.za.55196" target="_blank" class="social-btn"
+                                 title="Facebook">
+                                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                         <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                 </svg>
+                             </a>
+                 </div>
+                          </div>
+                         </div>
 
-                <div class="profilePhotoRing00">
-                    <div class="profilePhotoRing">
-                        <img src="https://github.com/MORTUZA-MURAD/portfolio/blob/main/20250516_093500.jpg?raw=true"
+                          <div class="profilePhotoRing00">
+          <div class="profilePhotoRing">
+                                <img src="https://github.com/MORTUZA-MURAD/portfolio/blob/main/20250516_093500.jpg?raw=true"
                             alt="Mortuza Murad" class="profile-pic">
-                        <div class="statusNanoBadge">Available</div>
-                    </div>
-                </div>
+                               <div class="statusNanoBadge">Available</div>
+                      </div>
             </div>
-        </div>
-    </section>
+                 </div>
+                 </div>
+          </section>
 
-    <!-- About Mortuza -->
-    <section id="about" class="aboutRealmWrap">
-        <div class="heroMetaGrid">
-            <div class="aboutMainGrid">
-          <h2 class="aboutStoryCard">About Me</h2>
-                <p class="aboutSkillBlade">
-                    Get to know more about my journey, passions, and what drives me as a developer.
-                </p>
-            </div>
-
-            <div class="aboutToneBlock">
-             <div class="aboutCoreInfo">
+                <section id="about" class="aboutRealmWrap">
+    <div class="heroMetaGrid">
+                      <div class="aboutMainGrid">
+                   <h2 class="aboutStoryCard">About Me</h2>
+            <p class="aboutSkillBlade">
+                            Get to know more about my journey, passions, and what drives me as a developer.
+                    </p>
+                  </div>
+  
+           <div class="aboutToneBlock">
+                     <div class="aboutCoreInfo">
                     <div class="aboutTwinColumn">
-                        <h3>My Programming Journey</h3>
-                        <p>
-                            My journey into the tech world solidified when I began my Bachelor of Science in Software Engineering at Daffodil International University in January 2024. Joining the DIU Software Engineering Club shortly after allowed me to immerse myself in the practical side of technology. This experience has transformed my curiosity into a structured path where I am constantly developing new technical skills and seeking opportunities to apply them in real-world scenarios.
+                                <h3>My Programming Journey</h3>
+                           <p>
+                                My journey into the tech world solidified when I began my Bachelor of Science in Software Engineering at Daffodil International University in January 2024. Joining the DIU Software Engineering Club shortly after allowed me to immerse myself in the practical side of technology. This experience has transformed my curiosity into a structured path where I am constantly developing new technical skills and seeking opportunities to apply them in real-world scenarios.
                         </p>
-                    </div>
+               </div>
 
-                    <div class="aboutTwinColumn">
+                           <div class="aboutTwinColumn">
                         <h3>What I Enjoy</h3>
-                        <p>
-                            I describe myself as a quiet and focused individual who thrives on working swiftly and effectively. I genuinely enjoy the collaborative aspects of development; I am an excellent team worker with strong interpersonal skills who finds satisfaction in conflict resolution and teamwork. My curiosity drives me to seek new responsibilities, and I love environments where I can utilize my patience and attention to detail to solve complex problems.
-                        </p>
-                    </div>
-                </div>
+                   <p>
+                                  I describe myself as a quiet and focused individual who thrives on working swiftly and effectively. I genuinely enjoy the collaborative aspects of development; I am an excellent team worker with strong interpersonal skills who finds satisfaction in conflict resolution and teamwork. My curiosity drives me to seek new responsibilities, and I love environments where I can utilize my patience and attention to detail to solve complex problems.
+                          </p>
+                       </div>
+           </div>
 
-                <div class="aboutCoreInfo">
-                    <div class="aboutTwinColumn">
-                        <h3>Academic Pursuits</h3>
+                      <div class="aboutCoreInfo">
+                <div class="aboutTwinColumn">
+                              <h3>Academic Pursuits</h3>
                         <p>
                             I am currently pursuing a Bachelor of Science in Software Engineering at Daffodil International University, located in Daffodil Smart City. Prior to my university studies, I built my academic foundation at Moqbular Rahman Government College and Bishnu Prashad Government High School. My academic career is characterized by a keen willingness to learn, which helps me balance my formal education with practical skill development.
-                        </p>
-                    </div>
+                     </p>
+                           </div>
 
-                <div class="aboutTwinColumn">
-                        <h3>My Approach</h3>
-                        <p>
+                  <div class="aboutTwinColumn">
+                     <h3>My Approach</h3>
+                            <p>
                             I bring an active and dynamic approach to getting things done. As a dedicated, organized, and methodical individual, I prioritize reliability and dependability in every project I undertake. I believe in effective time management and multitasking to meet goals, ensuring that I deliver quality work whether I am operating alone or as part of a larger team.
-                        </p>
-                    </div>
-            </div>
-            </div>
-        </div>
-    </section>
+            </p>
+                       </div>
+               </div>
+             </div>
+                   </div>
+            </section>
 
-    <!-- Skills Section Of Mortuza -->
-    <section id="skills" class="skillsOmegaGrid">
-        <div class="heroMetaGrid">
-            <div class="aboutMainGrid">
-                <h2 class="aboutStoryCard">Skills & Expertise</h2>
-                <p class="aboutSkillBlade">
-                    Here are the technologies and tools I work with to bring ideas to life.
-                </p>
-            </div>
-
-            <div class="skillsOmegaGrid1">
-                <div class="skillPanelPrime">
-                    <div class="skillPanelPrimecard">
-                     <h3 class="skillPanelPrimetitle">Frontend</h3>
-                        <div class="skilllist1">
-                            <div class="skillitem1">
-                                <div class="skillinfo11">
-                                    <span class="skillname">HTML</span>
+      <section id="skills" class="skillsOmegaGrid">
+             <div class="heroMetaGrid">
+       <div class="aboutMainGrid">
+                   <h2 class="aboutStoryCard">Skills & Expertise</h2>
+                   <p class="aboutSkillBlade">
+                       Here are the technologies and tools I work with to bring ideas to life.
+             </p>
+                  </div>
+  
+                     <div class="skillsOmegaGrid1">
+               <div class="skillPanelPrime">
+                        <div class="skillPanelPrimecard">
+                 <h3 class="skillPanelPrimetitle">Frontend</h3>
+                          <div class="skilllist1">
+                                <div class="skillitem1">
+                        <div class="skillinfo11">
+                                        <span class="skillname">HTML</span>
                                     <span class="skillpercentageinfo">95%</span>
-                                </div>
-                             <div class="skillScaleTrack">
+                            </div>
+                                 <div class="skillScaleTrack">
                                     <div class="skillFillBar" data-progress="95"></div>
-                                </div>
                             </div>
-                            <div class="skillitem1">
+                        </div>
+                                  <div class="skillitem1">
                                 <div class="skillinfo11">
-                                    <span class="skillname">CSS</span>
-                                    <span class="skillpercentageinfo">90%</span>
-                                </div>
-                                <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="90"></div>
-                                </div>
+                          <span class="skillname">CSS</span>
+                                        <span class="skillpercentageinfo">90%</span>
                             </div>
-                            <div class="skillitem1">
-                                <div class="skillinfo11">
-                                    <span class="skillname">JavaScript</span>
+                             <div class="skillScaleTrack">
+                                        <div class="skillFillBar" data-progress="90"></div>
+                        </div>
+                            </div>
+                             <div class="skillitem1">
+                                     <div class="skillinfo11">
+                                          <span class="skillname">JavaScript</span>
                                     <span class="skillpercentageinfo">88%</span>
-                                </div>
+                           </div>
                                 <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="88"></div>
+                                        <div class="skillFillBar" data-progress="88"></div>
                                 </div>
-                            </div>
-                            <div class="skillitem1">
-                               <div class="skillinfo11">
-                                    <span class="skillname">React</span>
-                                    <span class="skillpercentageinfo">85%</span>
-                             </div>
-                                <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="85"></div>
-                                </div>
-                            </div>
-                     <div class="skillitem1">
-                                <div class="skillinfo11">
-                                    <span class="skillname">Tailwind CSS</span>
-                                    <span class="skillpercentageinfo">90%</span>
-                                </div>
-                                <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="90"></div>
-                             </div>
-                         </div>
                       </div>
-                    </div>
-              </div>
+                                <div class="skillitem1">
+                                      <div class="skillinfo11">
+                                    <span class="skillname">React</span>
+                           <span class="skillpercentageinfo">85%</span>
+                                  </div>
+                                <div class="skillScaleTrack">
+                            <div class="skillFillBar" data-progress="85"></div>
+                                </div>
+                            </div>
+                                <div class="skillitem1">
+                                     <div class="skillinfo11">
+                                <span class="skillname">Tailwind CSS</span>
+                              <span class="skillpercentageinfo">90%</span>
+                                </div>
+                                          <div class="skillScaleTrack">
+                                    <div class="skillFillBar" data-progress="90"></div>
+                     </div>
+                              </div>
+                  </div>
+                         </div>
+                </div>
 
                 
 
-                <div class="skillPanelPrime">
-                    <div class="skillPanelPrimecard">
+                       <div class="skillPanelPrime">
+            <div class="skillPanelPrimecard">
                         <h3 class="skillPanelPrimetitle">Tools & Others</h3>
-                 <div class="skilllist1">
+             <div class="skilllist1">
                             <div class="skillitem1">
                              <div class="skillinfo11">
                                     <span class="skillname">Git & GitHub</span>
-                                    <span class="skillpercentageinfo">85%</span>
+                                        <span class="skillpercentageinfo">85%</span>
                                 </div>
                                 <div class="skillScaleTrack">
                                     <div class="skillFillBar" data-progress="85"></div>
                                 </div>
-                         </div>
+                     </div>
                             <div class="skillitem1">
                                 <div class="skillinfo11">
                                     <span class="skillname">VS Code</span>
                                 <span class="skillpercentageinfo">95%</span>
-                               </div>
+                                    </div>
                                 <div class="skillScaleTrack">
                                     <div class="skillFillBar" data-progress="95"></div>
                                 </div>
-                          </div>
-                            <div class="skillitem1">
+                       </div>
+                                 <div class="skillitem1">
                                 <div class="skillinfo11">
-                                    <span class="skillname">Figma</span>
+                                          <span class="skillname">Figma</span>
                                     <span class="skillpercentageinfo">80%</span>
                                 </div>
-                                <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="80"></div>
+                       <div class="skillScaleTrack">
+                                        <div class="skillFillBar" data-progress="80"></div>
                                 </div>
                             </div>
-                            <div class="skillitem1">
-                                <div class="skillinfo11">
+                                    <div class="skillitem1">
+                                         <div class="skillinfo11">
                                     <span class="skillname">Photoshop</span>
-                                   <span class="skillpercentageinfo">85%</span>
+                                           <span class="skillpercentageinfo">85%</span>
                                 </div>
-                                <div class="skillScaleTrack">
+                   <div class="skillScaleTrack">
                                     <div class="skillFillBar" data-progress="85"></div>
-                             </div>
+                                   </div>
                             </div>
-                          <div class="skillitem1">
+                                  <div class="skillitem1">
                                 <div class="skillinfo11">
                                     <span class="skillname">Responsive Design</span>
-                                    <span class="skillpercentageinfo">92%</span>
+                                           <span class="skillpercentageinfo">92%</span>
                                </div>
-                                <div class="skillScaleTrack">
-                                    <div class="skillFillBar" data-progress="92"></div>
+                                  <div class="skillScaleTrack">
+                                               <div class="skillFillBar" data-progress="92"></div>
                                 </div>
                          </div>
-                     </div>
+                </div>
                     </div>
               </div>
-         </div>
-        </div>
-    </section>
+                    </div>
+                 </div>
+  </section>
 
-    <!-- Education Section Of Mortuza-->
-    <section id="education" class="eduCardBlock">
+                 <section id="education" class="eduCardBlock">
         <div class="heroMetaGrid">
-            <div class="aboutMainGrid">
-                <h2 class="aboutStoryCard">Education</h2>
-                <p class="aboutSkillBlade">
+             <div class="aboutMainGrid">
+                      <h2 class="aboutStoryCard">Education</h2>
+                      <p class="aboutSkillBlade">
                     My academic background and formal education in computer science.
-                </p>
-            </div>
+           </p>
+                 </div>
 
-            <div class="eduGalaxyWrap">
+                   <div class="eduGalaxyWrap">
                 <div class="educationcard11">
                     <h3 class="eduDegreeTag">Higher Secondary Certificate (HSC)</h3>
-                    <h4 class="eduInstitutionName">Mokbular Rahman Government College</h4>
-                 <p class="eduTimelineRow"><strong>Year:</strong> 2020-2022</p>
-                 <p class="eduInfoText">
-                        Completed HSC in Science group with focus on Mathematics, Physics, and Chemistry.
+                         <h4 class="eduInstitutionName">Mokbular Rahman Government College</h4>
+                   <p class="eduTimelineRow"><strong>Year:</strong> 2020-2022</p>
+             <p class="eduInfoText">
+                           Completed HSC in Science group with focus on Mathematics, Physics, and Chemistry.
 
-                    </p>
-                </div>
+                     </p>
+               </div>
 
                 <div class="educationcard11">
-                    <h3 class="eduDegreeTag">Bachelor of Science in Software & Engineering</h3>
-                   <h4 class="eduInstitutionName">Daffodil International University</h4>
-                    <p class="eduTimelineRow"><strong>Year:</strong> 2023-Present</p>
-                <p class="eduInfoText">
+                     <h3 class="eduDegreeTag">Bachelor of Science in Software & Engineering</h3>
+                               <h4 class="eduInstitutionName">Daffodil International University</h4>
+             <p class="eduTimelineRow"><strong>Year:</strong> 2023-Present</p>
+                    <p class="eduInfoText">
                         Currently pursuing SWE degree with specialization in web development and software engineering.
-                        Maintaining excellent academic performance.
-                    </p>
-              </div>
+                    Maintaining excellent academic performance.
+                        </p>
+                </div>
+                   </div>
            </div>
-    </div>
+       </section>
+
+             <section id="projects" class="projectsection1">
+          <div class="heroMetaGrid">
+            <div class="aboutMainGrid">
+                     <h2 class="aboutStoryCard">Recent Projects</h2>
+                  <p class="aboutSkillBlade">
+                  A selection of my academic and personal development projects.
+                   </p>
+                  </div>
+
+                         <div class="projectgrid1">
+                     <div class="projectcard1">
+                      <div class="projectimage1">
+                        <div class="projectplaceholder1">AA</div>
+              </div>
+                  <div class="projectcontent5">
+                            <h3 class="projecttitle5">Adoption Addict</h3>
+                        <p class="projectdescription5">
+                            A comprehensive platform connecting potential pet owners with adoption agencies. Features user authentication, database integration via Google Sheets, and a responsive UI.
+                        </p>
+                        <div class="projecttech5">
+                                  <span class="techbadge5">HTML</span>
+                              <span class="techbadge5">CSS</span>
+                       <span class="techbadge5">JavaScript</span>
+                        </div>
+                        <a href="https://adoption-addict.netlify.app/" class="projectlink5">View Details</a>
+                        </div>
+            </div>
+
+                     <div class="projectcard1">
+                    <div class="projectimage1">
+              <div class="projectplaceholder1">OS</div>
+                    </div>
+                           <div class="projectcontent5">
+                   <h3 class="projecttitle5">Memory Management Sim</h3>
+                        <p class="projectdescription5">
+                                 An educational simulation demonstrating operating system memory management concepts, created for a university group presentation at DIU.
+                            </p>
+                     <div class="projecttech5">
+                                 <span class="techbadge5">JavaScript</span>
+                       <span class="techbadge5">Algorithms</span>
+                    </div>
+                        <a href="#" class="projectlink5">View Details</a>
+                         </div>
+            </div>
+
+                        <div class="projectcard1">
+               <div class="projectimage1">
+                              <div class="projectplaceholder1">Pf</div>
+              </div>
+                           <div class="projectcontent5">
+                  <h3 class="projecttitle5">Personal Portfolio</h3>
+                              <p class="projectdescription5">
+                      A fully responsive personal website featuring a custom aesthetic, CSS animations, and a contact form integration.
+                        </p>
+                               <div class="projecttech5">
+                  <span class="techbadge5">HTML5</span>
+                                  <span class="techbadge5">CSS3</span>
+                         <span class="techbadge5">VS Code</span>
+                             </div>
+                   <a href="#" class="projectlink5">View Details</a>
+                          </div>
+            </div>
+                 </div>
+           </div>
     </section>
 
     
-    <!-- Contact With Mortuza -->
-    <section id="contact" class="contactWaveWrap">
-        <div class="heroMetaGrid">
-            <div class="aboutMainGrid">
-                <h2 class="aboutStoryCard">Get In Touch</h2>
+          <section id="contact" class="contactWaveWrap">
+         <div class="heroMetaGrid">
+      <div class="aboutMainGrid">
+                     <h2 class="aboutStoryCard">Get In Touch</h2>
                 <p class="aboutSkillBlade">
                     Let's connect! Feel free to reach out for collaborations, opportunities, or just to say hello.
-                </p>
-            </div>
+                     </p>
+         </div>
 
-            <div class="contactBoxPrime">
-                <div class="contact-card">
+                 <div class="contactBoxPrime">
+           <div class="contact-card">
                     <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                  <h3>Email</h3>
-                    <p>mortuzamurad16@gmail.com</p>
+                        </svg>
+             <h3>Email</h3>
+                        <p>mortuzamurad16@gmail.com</p>
                     <a href="mailto:mortuzamurad16@gmail.com" class="contactbtn1">Send Email</a>
               </div>
 
                 <div class="contact-card">
                     <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                     <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                        </path>
-                    </svg>
-                 <h3>Phone</h3>
-                    <p>+880 1722 408 377</p>
-                    <a href="tel:+8801722408377" class="contactbtn1">Call Now</a>
-            </div>
+                           <path
+                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                         </path>
+              </svg>
+                    <h3>Phone</h3>
+                         <p>+880 1722 408 377</p>
+              <a href="tel:+8801722408377" class="contactbtn1">Call Now</a>
+                    </div>
 
-                <div class="contact-card">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="contact-card">
+                         <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path
-                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                        </path>
-                   </svg>
-                    <h3>WhatsApp</h3>
-                  <p>+880 1722 408 377</p>
-                    <a href="https://wa.me/8801722408377" target="_blank" class="contactbtn1">Message</a>
+                         d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                             </path>
+                </svg>
+                       <h3>WhatsApp</h3>
+             <p>+880 1722 408 377</p>
+                        <a href="https://wa.me/8801722408377" target="_blank" class="contactbtn1">Message</a>
              </div>
-            </div>
-     </div>
-    </section>
+      </div>
+           </div>
+          </section>
 
-    <!-- Footer Mortuza -->
-    <footer class="footer">
-        <div class="heroMetaGrid">
-            <div class="footer-content">
-             <h3 class="footertitle1">Mortuza Murad</h3>
-                <p class="footerdes11">Building the future, one line of code at a time.</p>
+               <footer class="footer">
+   <div class="heroMetaGrid">
+                    <div class="footer-content">
+                <h3 class="footertitle1">Mortuza Murad</h3>
+                      <p class="footerdes11">Building the future, one line of code at a time.</p>
 
-                <div class="footersocial">
-                    <a href="https://github.com/MORTUZA-MURAD" target="_blank" class="footersociallink">
-                       <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                       <div class="footersocial">
+            <a href="https://github.com/MORTUZA-MURAD" target="_blank" class="footersociallink">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                             <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                </a>
+                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+            </a>
                    
                     </a>
-              <a href="https://www.facebook.com/mortu.za.55196" target="_blank" class="footersociallink">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                       <a href="https://www.facebook.com/mortu.za.55196" target="_blank" class="footersociallink">
+                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                             <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
+                                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                     </svg>
                     </a>
-             </div>
+         </div>
 
-                <div class="footercopyright2">
+                    <div class="footercopyright2">
                     <p>&copy; 2025 Mortuza Murad. All rights reserved.</p>
-                </div>
+        </div>
         </div>
     </div>
-    </footer>
+             </footer>
 
-    <script src="script.js"></script>
+           <script>
+       
+        const menuToggle = document.getElementById('menuToggle');
+             const navMenu = document.getElementById('navMenu');
+
+      menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+          });
+
+     
+           const navLinks = document.querySelectorAll('.nav001link1');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                   navMenu.classList.remove('active');
+               });
+       });
+
+            navLinks.forEach(link => {
+                   link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                     const targetSection = document.querySelector(targetId);
+                
+                   if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 64; // 64px for navOrbitWrap height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                   }
+            });
+             });
+
+        const navOrbitWrap = document.getElementById('navOrbitWrap');
+              let lastScroll = 0;
+
+         window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+           navOrbitWrap.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+              } else {
+                navOrbitWrap.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        }
+            
+            lastScroll = currentScroll;
+        });
+      
+           window.addEventListener('scroll', () => {
+              let current = '';
+             const sections = document.querySelectorAll('section');
+            
+        sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                      const sectionHeight = section.clientHeight;
+                  
+                    if (window.pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+               });
+            
+              navLinks.forEach(link => {
+                     link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+          });
+
+       const animateSkills = () => {
+               const skillsSection = document.getElementById('skills');
+            const progressBars = document.querySelectorAll('.skillFillBar');
+            
+             const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                         progressBars.forEach(bar => {
+                               const progress = bar.getAttribute('data-progress');
+                              bar.style.setProperty('--progress-width', `${progress}%`);
+                                bar.classList.add('animate');
+                         });
+                           observer.unobserve(entry.target);
+                     }
+                });
+              }, {
+                  threshold: 0.5
+            });
+               
+                 if (skillsSection) {
+                observer.observe(skillsSection);
+                  }
+        };
+
+  
+        animateSkills();
+          const revealElements = () => {
+                  const reveals = document.querySelectorAll('.aboutTwinColumn, .skillPanelPrimecard, .educationcard11, .experience-card, .projectcard1, .contact-card');
+            
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                         entry.target.classList.add('animate-fade-in');
+                                observer.unobserve(entry.target);
+                       }
+                });
+              }, {
+                  threshold: 0.1
+          });
+            
+              reveals.forEach(element => {
+                  observer.observe(element);
+       });
+           };
+
+    
+          revealElements();
+      const updateYear = () => {
+               const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+              yearElements.forEach(element => {
+                element.textContent = currentYear;
+            });
+        };
+        updateYear();
+          window.addEventListener('load', () => {
+               document.body.style.opacity = '0';
+             setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease-in';
+                   document.body.style.opacity = '1';
+            }, 100);
+        });
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                  if (target) {
+                    const offsetTop = target.offsetTop - 64;
+                        window.scrollTo({
+                         top: offsetTop,
+                          behavior: 'smooth'
+                    });
+                  }
+         });
+              });
+           const heroSection = document.querySelector('.heroNovaShell');
+         if (heroSection) {
+             heroSection.addEventListener('mousemove', (e) => {
+                  const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+                
+                 const profilePic = document.querySelector('.profilePhotoRing');
+                if (profilePic) {
+                      profilePic.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                }
+            });
+          }
+         const createBackToTop = () => {
+               const button = document.createElement('button');
+             button.innerHTML = '↑';
+            button.className = 'back-to-top';
+         button.style.cssText = `
+                  position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                width: 50px;
+            height: 50px;
+                border-radius: 50%;
+                   background-color: var(--primary-color);
+                 color: white;
+                border: none;
+                  font-size: 1.5rem;
+                cursor: pointer;
+          opacity: 0;
+                 visibility: hidden;
+                    transition: all 0.3s ease;
+                   z-index: 999;
+                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              `;
+            
+         document.body.appendChild(button);
+            
+              window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 500) {
+                      button.style.opacity = '1';
+                    button.style.visibility = 'visible';
+               } else {
+                    button.style.opacity = '0';
+                      button.style.visibility = 'hidden';
+                 }
+         });
+            
+             button.addEventListener('click', () => {
+                 window.scrollTo({
+                    top: 0,
+                     behavior: 'smooth'
+                });
+              });
+            
+             button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-5px)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                 button.style.transform = 'translateY(0)';
+            });
+        };
+
+        createBackToTop();
+       
+        console.log('%c👋 Welcome to my portfolio!', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+        console.log('%cBuilt with ❤️ using HTML, CSS & JavaScript', 'color: #6b7280; font-size: 14px;');
+    </script>
 </body>
 
 </html>
