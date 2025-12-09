@@ -172,7 +172,7 @@ ul {
 
 .social-btn,
 .contactbtn1,
-.project-link {
+.projectlink5 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -192,7 +192,7 @@ ul {
 
 .social-btn:hover,
 .contactbtn1:hover,
-.project-link:hover {
+.projectlink5:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-2px);
@@ -536,17 +536,17 @@ section {
 /* ===========================
    Projects Section
    =========================== */
-.projects-section {
+.projectsection1 {
     background-color: var(--bg-white);
 }
 
-.projects-grid {
+.projectgrid1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.project-card {
+.projectcard1 {
     background-color: white;
     border-radius: 0.75rem;
     overflow: hidden;
@@ -554,12 +554,12 @@ section {
     transition: var(--transition);
 }
 
-.project-card:hover {
+.projectcard1:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.project-image {
+.projectimage1 {
     aspect-ratio: 16 / 9;
     background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 100%);
     display: flex;
@@ -567,37 +567,37 @@ section {
     justify-content: center;
 }
 
-.project-placeholder {
+.projectplaceholder1 {
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
-.project-content {
+.projectcontent5 {
     padding: 1.5rem;
 }
 
-.project-title {
+.projecttitle5 {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
-.project-description {
+.projectdescription5 {
     font-size: 0.875rem;
     color: var(--text-light);
     margin-bottom: 1rem;
 }
 
-.project-tech {
+.projecttech5 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.tech-badge {
+.techbadge5 {
     padding: 0.25rem 0.75rem;
     background-color: var(--bg-gray);
     color: var(--text-dark);
@@ -729,7 +729,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects-grid {
+    .projectgrid1 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -778,7 +778,7 @@ section {
     }
 
     .skillsOmegaGrid1,
-    .projects-grid,
+    .projectgrid1,
     .contactBoxPrime {
         grid-template-columns: 1fr;
     }

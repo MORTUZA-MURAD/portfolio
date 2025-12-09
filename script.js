@@ -113,7 +113,7 @@ animateSkills();
 // Scroll Reveal Animation
 // ===========================
 const revealElements = () => {
-    const reveals = document.querySelectorAll('.aboutTwinColumn, .skillPanelPrimecard, .educationcard11, .experience-card, .project-card, .contact-card');
+    const reveals = document.querySelectorAll('.aboutTwinColumn, .skillPanelPrimecard, .educationcard11, .experience-card, .projectcard1, .contact-card');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
