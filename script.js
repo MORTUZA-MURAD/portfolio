@@ -15,21 +15,21 @@ const menuToggle = document.getElementById('menuToggle');
                });
        });
 
-            navLinks.forEach(link => {
-                   link.addEventListener('click', (e) => {
+            navLinks.forEach(link =>{
+                   link.addEventListener('click',(e)=>{
                 e.preventDefault();
-                const targetId = link.getAttribute('href');
-                     const targetSection = document.querySelector(targetId);
+                const targetId =link.getAttribute('href');
+                     const targetSection =document.querySelector(targetId);
                 
-                   if (targetSection) {
+               if(targetSection){
                     const offsetTop = targetSection.offsetTop - 64; // 64px for navOrbitWrap height
-                    window.scrollTo({
-                        top: offsetTop,
+                     window.scrollTo({
+                          top: offsetTop,
                         behavior: 'smooth'
-                    });
+                    } );
                    }
-            });
-             });
+            } );
+             } );
 
         const navOrbitWrap = document.getElementById('navOrbitWrap');
               let lastScroll = 0;
